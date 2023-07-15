@@ -7,13 +7,21 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SplashViewController: UIViewController {
 
+    @IBOutlet var chefHatImageView : UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        initView()
     }
-
+    
+    
+    func initView() {
+        //chefHatImageView.rotate(degree: -36.54)
+    }
 
 }
 
