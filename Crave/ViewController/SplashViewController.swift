@@ -21,6 +21,14 @@ class SplashViewController: UIViewController {
     
     func initView() {
         //chefHatImageView.rotate(degree: -36.54)
+        
+        Timer.scheduledTimer(withTimeInterval: 2, repeats: false ) { timer in
+            self.loadNextScreen()
+        }
+    }
+    
+    func loadNextScreen() {
+        NavigationManager.replaceWithUITabBarController(from: self)
     }
 
 }
