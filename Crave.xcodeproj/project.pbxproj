@@ -22,6 +22,7 @@
 		CB531E572A6619AA0070C4B5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB531E562A6619AA0070C4B5 /* HomeViewController.swift */; };
 		CB531E592A661B8F0070C4B5 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB531E582A661B8E0070C4B5 /* NetworkModel.swift */; };
 		CB531E5C2A6620870070C4B5 /* UrlGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB531E5B2A6620870070C4B5 /* UrlGenerator.swift */; };
+		CB531E602A6622BB0070C4B5 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB531E5F2A6622BB0070C4B5 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		CB531E562A6619AA0070C4B5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CB531E582A661B8E0070C4B5 /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
 		CB531E5B2A6620870070C4B5 /* UrlGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlGenerator.swift; sourceTree = "<group>"; };
+		CB531E5F2A6622BB0070C4B5 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		CB35E8E12A62685800B8BD7D /* Crave */ = {
 			isa = PBXGroup;
 			children = (
+				CB531E5E2A66229C0070C4B5 /* ViewModel */,
 				CB531E532A6616030070C4B5 /* Private */,
 				CB531E502A66136A0070C4B5 /* Network */,
 				CB35E8FF2A63053D00B8BD7D /* Util */,
@@ -177,6 +180,14 @@
 				CB531E542A66162A0070C4B5 /* Keys.swift */,
 			);
 			path = Private;
+			sourceTree = "<group>";
+		};
+		CB531E5E2A66229C0070C4B5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CB531E5F2A6622BB0070C4B5 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +312,7 @@
 				CB531E522A6613B50070C4B5 /* CategoryService.swift in Sources */,
 				CB531E572A6619AA0070C4B5 /* HomeViewController.swift in Sources */,
 				CB35E8E52A62685800B8BD7D /* SceneDelegate.swift in Sources */,
+				CB531E602A6622BB0070C4B5 /* HomeViewModel.swift in Sources */,
 				CB531E5C2A6620870070C4B5 /* UrlGenerator.swift in Sources */,
 				CB35E8FE2A63039F00B8BD7D /* NavigationManager.swift in Sources */,
 				CB531E592A661B8F0070C4B5 /* NetworkModel.swift in Sources */,

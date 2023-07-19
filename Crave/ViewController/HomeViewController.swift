@@ -9,7 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    let categoryService = CategoryService()
+  private let viewModel = HomeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +18,10 @@ class HomeViewController: UIViewController {
     }
     
     private func loadCategory() {
-        categoryService.getCategories()
+        viewModel.loadCategories() { categoryResponse in
+            print("Total \(categoryResponse.results.count) item found")
+            print(categoryResponse.results)
+        }
     }
     
 
