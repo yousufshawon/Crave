@@ -69,7 +69,7 @@
         <!--HomeViewController-->
         <scene sceneID="a89-sE-UuT">
             <objects>
-                <viewController id="sWf-Kv-NQq" userLabel="HomeViewController" sceneMemberID="viewController">
+                <viewController id="sWf-Kv-NQq" userLabel="HomeViewController" customClass="HomeViewController" customModule="Crave" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cvj-Cu-Qox">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

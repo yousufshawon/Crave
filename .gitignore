@@ -30,6 +30,9 @@ DerivedData/
 *.dSYM.zip
 *.dSYM
 
+# Private
+Crave/Private/
+
 ## Playgrounds
 timeline.xctimeline
 playground.xcworkspace

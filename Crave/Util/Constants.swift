@@ -8,7 +8,11 @@
 import Foundation
 
 class Constants {
-    class ViewController {
+    struct ViewController {
         static let MainTabBarControllerStoryboardId = "MainTabBarController"
+    }
+    
+    struct AppUrl {
+        static let craveBaseUrl = "https://parseapi.back4app.com/"
     }
 }
