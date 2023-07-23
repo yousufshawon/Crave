@@ -13,4 +13,13 @@ extension UIImageView {
         let angle = degree * CGFloat(Double.pi / 180 )
         self.transform = CGAffineTransform(rotationAngle: angle)
     }
+    
+    func makeCircleShape(){
+        self.layer.cornerRadius = self.layer.frame.width / 2.0
+    }
+    
+    func makeBorder(borderWidth: CGFloat, color : UIColor) {
+        self.layer.borderWidth = borderWidth
+        self.layer.borderColor = color.cgColor
+    }
 }

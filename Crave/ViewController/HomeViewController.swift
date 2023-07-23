@@ -9,12 +9,18 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-  private let viewModel = HomeViewModel()
+    @IBOutlet weak var profileIcon: UIImageView!
+    private let viewModel = HomeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        initView()
         loadCategory()
+    }
+    
+    private func initView() {
+        profileIcon.makeCircleShape()
     }
     
     private func loadCategory() {
@@ -25,14 +31,5 @@ class HomeViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
