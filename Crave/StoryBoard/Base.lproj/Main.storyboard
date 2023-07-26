@@ -91,16 +91,13 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aftabnagar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPl-7u-FR2" userLabel="Location">
-                                                        <rect key="frame" x="60" y="5" width="100" height="21.666666666666668"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="100" id="tgn-VW-KtW"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="59.999999999999993" y="5" width="89.333333333333314" height="21.666666666666668"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="keyboard_arrow_down_20" translatesAutoresizingMaskIntoConstraints="NO" id="grs-4c-hTq" userLabel="BottomArrow">
-                                                        <rect key="frame" x="160" y="5" width="25" height="25"/>
+                                                        <rect key="frame" x="149.33333333333334" y="5" width="25" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="25" id="4h1-l5-NRF"/>
                                                             <constraint firstAttribute="height" constant="25" id="whz-X6-g3m"/>
@@ -109,7 +106,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dhaka" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXL-CU-y8K" userLabel="District">
                                                         <rect key="frame" x="60" y="26.666666666666671" width="100" height="18"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="100" id="ewJ-C0-fv3"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="ewJ-C0-fv3"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <nil key="textColor"/>
@@ -139,11 +136,29 @@
                                                     <constraint firstAttribute="bottom" secondItem="hXL-CU-y8K" secondAttribute="bottom" constant="5" id="yeb-NT-GzA"/>
                                                 </constraints>
                                             </view>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="offer" translatesAutoresizingMaskIntoConstraints="NO" id="ozp-e2-zak" userLabel="imageViewOffer">
+                                                <rect key="frame" x="15" y="165.66666666666663" width="363" height="195"/>
+                                            </imageView>
+                                            <searchBar contentMode="redraw" placeholder="Type a dish or cuisine" translatesAutoresizingMaskIntoConstraints="NO" id="FOS-dn-Pmj">
+                                                <rect key="frame" x="15" y="79.666666666666657" width="363" height="56"/>
+                                                <color key="backgroundColor" red="0.97647058819999999" green="0.97254901959999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="barTintColor" red="0.97647058819999999" green="0.97254901959999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="sWf-Kv-NQq" id="3Q8-gv-lqr"/>
+                                                </connections>
+                                            </searchBar>
                                         </subviews>
                                         <color key="backgroundColor" red="0.97647058823529409" green="0.97254901960784312" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
+                                            <constraint firstItem="ozp-e2-zak" firstAttribute="top" secondItem="FOS-dn-Pmj" secondAttribute="bottom" constant="30" id="24z-x8-70n"/>
+                                            <constraint firstItem="ozp-e2-zak" firstAttribute="leading" secondItem="RfN-jZ-vkz" secondAttribute="leading" constant="15" id="3ji-9B-2gX"/>
+                                            <constraint firstAttribute="trailing" secondItem="FOS-dn-Pmj" secondAttribute="trailing" constant="15" id="ASX-sz-doa"/>
                                             <constraint firstItem="B7N-of-7RG" firstAttribute="top" secondItem="RfN-jZ-vkz" secondAttribute="top" id="BiV-ow-YPc"/>
                                             <constraint firstItem="B7N-of-7RG" firstAttribute="leading" secondItem="RfN-jZ-vkz" secondAttribute="leading" id="Gga-8L-juZ"/>
+                                            <constraint firstItem="FOS-dn-Pmj" firstAttribute="top" secondItem="B7N-of-7RG" secondAttribute="bottom" constant="30" id="RdV-Pm-vQs"/>
+                                            <constraint firstAttribute="trailing" secondItem="ozp-e2-zak" secondAttribute="trailing" constant="15" id="b1n-QQ-F9n"/>
+                                            <constraint firstItem="FOS-dn-Pmj" firstAttribute="leading" secondItem="RfN-jZ-vkz" secondAttribute="leading" constant="15" id="gQR-KT-nUD"/>
                                             <constraint firstAttribute="trailing" secondItem="B7N-of-7RG" secondAttribute="trailing" id="wbD-5T-U2R"/>
                                         </constraints>
                                     </view>
@@ -277,6 +292,7 @@
         <image name="keyboard_arrow_down_20" width="20" height="20"/>
         <image name="logo" width="162" height="60"/>
         <image name="map_pin_36" width="36" height="36"/>
+        <image name="offer" width="355" height="195"/>
         <image name="tab_icon_home" width="24" height="24"/>
         <namedColor name="black_80">
             <color red="0.0" green="0.0" blue="0.0" alpha="0.80000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
