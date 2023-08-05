@@ -22,4 +22,16 @@ extension UIImageView {
         self.layer.borderWidth = borderWidth
         self.layer.borderColor = color.cgColor
     }
+    
+    func load(url: URL) {
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self?.image = image
+                    }
+                }
+            }
+        }
+    }
 }
