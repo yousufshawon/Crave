@@ -52,7 +52,7 @@ class PopularCategoryCell: UITableViewCell, UICollectionViewDataSource, UICollec
     }
     
     
-    func getCategoryCell(collectionView:UICollectionView, indexPath : IndexPath) -> CategoryCell{
+    private func getCategoryCell(collectionView:UICollectionView, indexPath : IndexPath) -> CategoryCell{
         
         let categoryCell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCell.identifierName, for: indexPath) as! CategoryCell
         
