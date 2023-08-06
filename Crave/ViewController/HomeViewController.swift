@@ -49,7 +49,7 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -66,6 +66,8 @@ extension HomeViewController : UITableViewDataSource {
             let cell = getTodaysSpecialCell(tableView: tableView)
             cell.update()
             return cell
+        } else if(indexPath.row == 3) {
+          return getDessertViewCell(tableView: tableView)
         } else {
             return UITableViewCell()
         }
@@ -101,6 +103,17 @@ extension HomeViewController : UITableViewDataSource {
         } else {
             let newCell = Bundle.main.loadNibNamed(TodaySpecialViewCell.identifierName, owner: self)?.first as! TodaySpecialViewCell
             print("Todays special new call created")
+            return newCell
+        }
+    }
+    
+    private func getDessertViewCell(tableView : UITableView) -> UITableViewCell {
+        if let oldCell = tableView.dequeueReusableCell(withIdentifier: DessertViewCell.identifierName) as? DessertViewCell {
+            print("Reusing DessertViewCell")
+            return oldCell
+        } else {
+            let newCell = Bundle.main.loadNibNamed(DessertViewCell.identifierName, owner: self)?.first as! DessertViewCell
+            print("DessertView new cell created")
             return newCell
         }
     }
