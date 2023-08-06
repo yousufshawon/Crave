@@ -73,14 +73,32 @@
                     <view key="view" contentMode="scaleToFill" id="cvj-Cu-Qox">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Zt5-Ku-AHw" userLabel="TableViewParent">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="sWf-Kv-NQq" id="fhs-Ne-PmO"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="jgm-CE-TkV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Zt5-Ku-AHw" firstAttribute="top" secondItem="jgm-CE-TkV" secondAttribute="top" id="2Lc-n5-VIf"/>
+                            <constraint firstItem="jgm-CE-TkV" firstAttribute="bottom" secondItem="Zt5-Ku-AHw" secondAttribute="bottom" id="5uf-hX-Uz3"/>
+                            <constraint firstItem="Zt5-Ku-AHw" firstAttribute="leading" secondItem="jgm-CE-TkV" secondAttribute="leading" id="8Kr-zR-pRX"/>
+                            <constraint firstItem="jgm-CE-TkV" firstAttribute="trailing" secondItem="Zt5-Ku-AHw" secondAttribute="trailing" id="dCA-uc-3Fk"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="tab_icon_home" id="MsE-hS-fVl"/>
+                    <connections>
+                        <outlet property="tableViewContent" destination="Zt5-Ku-AHw" id="dmW-BI-0ym"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p2W-rr-VaG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1735" y="-1496"/>
+            <point key="canvasLocation" x="1733.5877862595419" y="-1496.4788732394368"/>
         </scene>
         <!--MenuViewController-->
         <scene sceneID="j76-BT-nIe">
