@@ -8,6 +8,6 @@ target 'Crave' do
   # Pods for Crave
   pod 'Alamofire'
   # Pods for Parse Sdk
-  pod 'Parse'
+  #pod 'Parse'
 
 end
