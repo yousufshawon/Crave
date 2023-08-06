@@ -25,11 +25,11 @@ class HomeViewController: UIViewController {
 
     }
     
-    private func initCollectionView() {
-        let categoryCellNib = UINib(nibName: CategoryCell.identifierName, bundle: nil)
-        collectionViewCategory.register(categoryCellNib, forCellWithReuseIdentifier: CategoryCell.identifierName)
-        collectionViewCategory.setCollectionViewLayout(UICollectionViewFlowLayout.init(), animated: true)
-    }
+//    private func initCollectionView() {
+//        let categoryCellNib = UINib(nibName: CategoryCell.identifierName, bundle: nil)
+//        collectionViewCategory.register(categoryCellNib, forCellWithReuseIdentifier: CategoryCell.identifierName)
+//        collectionViewCategory.setCollectionViewLayout(UICollectionViewFlowLayout.init(), animated: true)
+//    }
     
     private func loadCategory() {
         viewModel.loadCategories() { categoryResponse in
@@ -49,7 +49,7 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -62,8 +62,11 @@ extension HomeViewController : UITableViewDataSource {
             let populatCategoryCell =  getPoluparCategoryView(tableView: tableView)
             populatCategoryCell.update(list: categoryList)
             return populatCategoryCell
-        }
-        else {
+        } else if(indexPath.row == 2) {
+            let cell = getTodaysSpecialCell(tableView: tableView)
+            cell.update()
+            return cell
+        } else {
             return UITableViewCell()
         }
     }
@@ -87,6 +90,17 @@ extension HomeViewController : UITableViewDataSource {
         } else {
             let newCell = Bundle.main.loadNibNamed(PopularCategoryCell.reuseIdentifier, owner: self)?.first as! PopularCategoryCell
             print("Popular Category New call created")
+            return newCell
+        }
+    }
+    
+    private func getTodaysSpecialCell(tableView:UITableView) -> TodaySpecialViewCell {
+        if let oldCell = tableView.dequeueReusableCell(withIdentifier: TodaySpecialViewCell.identifierName) as? TodaySpecialViewCell {
+            print("Reusing Todays special cell")
+            return oldCell
+        } else {
+            let newCell = Bundle.main.loadNibNamed(TodaySpecialViewCell.identifierName, owner: self)?.first as! TodaySpecialViewCell
+            print("Todays special new call created")
             return newCell
         }
     }
