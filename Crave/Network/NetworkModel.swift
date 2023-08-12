@@ -16,3 +16,31 @@ struct Category : Decodable {
 struct CategoryResponse : Decodable {
     var results : [Category]
 }
+
+
+struct TodaySpecial : Decodable {
+    var name : String
+    var price : Int
+    var discount : Int
+    var description : String
+    var imageUrl : String
+
+}
+
+struct TodaySpecialResponse : Decodable {
+    var results : [TodaySpecial]
+}
+
+struct Dessert : Decodable {
+    var name : String
+    var price : Int
+    var discount : Int
+    var description : String
+    var imageUrl : String
+
+}
+
+struct DessertResponse : Decodable {
+    var results : [Dessert]
+}
+

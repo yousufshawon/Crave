@@ -22,7 +22,7 @@ class CategoryService {
         
         print("Loadig Categories")
         AF.request(url, method: .get,  headers: headers).responseDecodable(of: CategoryResponse.self) { response in
-            print(response)
+           // print(response)
             switch(response.result) {
                 
             case .success(let categoryResponse):

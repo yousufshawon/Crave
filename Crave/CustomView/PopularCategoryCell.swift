@@ -33,9 +33,7 @@ class PopularCategoryCell: UITableViewCell, UICollectionViewDataSource, UICollec
     
     func update(list : [Category]) {
         self.categoryList.removeAll()
-        for category in list {
-            self.categoryList.append(category)
-        }
+        self.categoryList.append(contentsOf: list)
         print("Category size: \( categoryList.count)")
         self.collectionVIewCategory.reloadData()
     }
@@ -47,6 +45,7 @@ class PopularCategoryCell: UITableViewCell, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let categoryCell =  getCategoryCell(collectionView: collectionView, indexPath: indexPath)
+        print("Category IndexPath: \(indexPath.row) Name: \(categoryList[indexPath.row].name)")
         categoryCell.bindView(category: categoryList[indexPath.row])
         return categoryCell
     }

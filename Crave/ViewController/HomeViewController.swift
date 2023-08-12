@@ -13,12 +13,16 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var collectionViewCategory: UICollectionView!
     private let viewModel = HomeViewModel()
     private var categoryList = [Category]()
+    private var todaySpecialList = [TodaySpecial]()
+    private var dessertList = [Dessert]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
         loadCategory()
+        loadTodaySpecial()
+        loadDessertList()
     }
     
     private func initView() {
@@ -33,14 +37,35 @@ class HomeViewController: UIViewController {
     
     private func loadCategory() {
         viewModel.loadCategories() { categoryResponse in
-            print("Total \(categoryResponse.results.count) item found")
-            print(categoryResponse.results)
+            print("Total \(categoryResponse.results.count) Catrgory found")
+            //print(categoryResponse.results)
             self.categoryList.removeAll()
             for category in categoryResponse.results {
                 self.categoryList.append(category)
             }
+            print("Reload TableView")
             self.tableViewContent.reloadData()
            // self.collectionViewCategory.reloadData()
+        }
+    }
+    
+    private func loadTodaySpecial() {
+        viewModel.loadTodaySpecial() { todaySpecialResponse in
+            print("In HomeViewController: Total: \(todaySpecialResponse.results.count) TodaySpecial found")
+            self.todaySpecialList.removeAll()
+            self.todaySpecialList.append(contentsOf: todaySpecialResponse.results)
+            print("Reload TableView for TodaySpecialResponse")
+            self.tableViewContent.reloadData()
+        }
+    }
+    
+    private func loadDessertList() {
+        viewModel.loadDesserts { dessertResponse in
+            print("In HomeViewController : Toatal :\(dessertResponse.results.count) Dessert found")
+            self.dessertList.removeAll()
+            self.dessertList.append(contentsOf: dessertResponse.results)
+            print("Reload TableView for DessertResponse")
+            self.tableViewContent.reloadData()
         }
     }
     
@@ -64,10 +89,12 @@ extension HomeViewController : UITableViewDataSource {
             return populatCategoryCell
         } else if(indexPath.row == 2) {
             let cell = getTodaysSpecialCell(tableView: tableView)
-            cell.update()
+            cell.update(list:todaySpecialList)
             return cell
         } else if(indexPath.row == 3) {
-          return getDessertViewCell(tableView: tableView)
+          let dessertVieCell =  getDessertViewCell(tableView: tableView)
+            dessertVieCell.update(dessertList: dessertList)
+            return dessertVieCell
         } else {
             return UITableViewCell()
         }
@@ -107,7 +134,7 @@ extension HomeViewController : UITableViewDataSource {
         }
     }
     
-    private func getDessertViewCell(tableView : UITableView) -> UITableViewCell {
+    private func getDessertViewCell(tableView : UITableView) -> DessertViewCell {
         if let oldCell = tableView.dequeueReusableCell(withIdentifier: DessertViewCell.identifierName) as? DessertViewCell {
             print("Reusing DessertViewCell")
             return oldCell

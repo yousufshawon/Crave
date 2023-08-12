@@ -29,6 +29,9 @@
 		CB531E592A661B8F0070C4B5 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB531E582A661B8E0070C4B5 /* NetworkModel.swift */; };
 		CB531E5C2A6620870070C4B5 /* UrlGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB531E5B2A6620870070C4B5 /* UrlGenerator.swift */; };
 		CB531E602A6622BB0070C4B5 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB531E5F2A6622BB0070C4B5 /* HomeViewModel.swift */; };
+		CB6EBC582A81C8A40076E515 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6EBC572A81C8A40076E515 /* ApiService.swift */; };
+		CB6EBC5A2A81C9360076E515 /* TodaySpecialService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6EBC592A81C9360076E515 /* TodaySpecialService.swift */; };
+		CB8B3E832A85BD3F0060718A /* DessertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8B3E822A85BD3F0060718A /* DessertService.swift */; };
 		CBE82D9E2A7E3FCD00FB2508 /* TodaySpecialViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE82D9C2A7E3FCD00FB2508 /* TodaySpecialViewCell.swift */; };
 		CBE82D9F2A7E3FCD00FB2508 /* TodaySpecialViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBE82D9D2A7E3FCD00FB2508 /* TodaySpecialViewCell.xib */; };
 		CBE82DA62A7E895B00FB2508 /* FoodItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE82DA42A7E895B00FB2508 /* FoodItemCell.swift */; };
@@ -64,6 +67,9 @@
 		CB531E582A661B8E0070C4B5 /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
 		CB531E5B2A6620870070C4B5 /* UrlGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlGenerator.swift; sourceTree = "<group>"; };
 		CB531E5F2A6622BB0070C4B5 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		CB6EBC572A81C8A40076E515 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		CB6EBC592A81C9360076E515 /* TodaySpecialService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaySpecialService.swift; sourceTree = "<group>"; };
+		CB8B3E822A85BD3F0060718A /* DessertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertService.swift; sourceTree = "<group>"; };
 		CBE82D9C2A7E3FCD00FB2508 /* TodaySpecialViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaySpecialViewCell.swift; sourceTree = "<group>"; };
 		CBE82D9D2A7E3FCD00FB2508 /* TodaySpecialViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodaySpecialViewCell.xib; sourceTree = "<group>"; };
 		CBE82DA42A7E895B00FB2508 /* FoodItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemCell.swift; sourceTree = "<group>"; };
@@ -214,6 +220,9 @@
 				CB531E512A6613B50070C4B5 /* CategoryService.swift */,
 				CB531E582A661B8E0070C4B5 /* NetworkModel.swift */,
 				CB531E5B2A6620870070C4B5 /* UrlGenerator.swift */,
+				CB6EBC572A81C8A40076E515 /* ApiService.swift */,
+				CB6EBC592A81C9360076E515 /* TodaySpecialService.swift */,
+				CB8B3E822A85BD3F0060718A /* DessertService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -365,10 +374,13 @@
 				CB2DFFBF2A7819200079538C /* HomeHeaderCell.swift in Sources */,
 				CB531E522A6613B50070C4B5 /* CategoryService.swift in Sources */,
 				CB531E572A6619AA0070C4B5 /* HomeViewController.swift in Sources */,
+				CB8B3E832A85BD3F0060718A /* DessertService.swift in Sources */,
 				CB35E8E52A62685800B8BD7D /* SceneDelegate.swift in Sources */,
+				CB6EBC5A2A81C9360076E515 /* TodaySpecialService.swift in Sources */,
 				CBE82DAA2A7F6E9200FB2508 /* DessertViewCell.swift in Sources */,
 				CB531E602A6622BB0070C4B5 /* HomeViewModel.swift in Sources */,
 				CB2DFFC32A781F7E0079538C /* PopularCategoryCell.swift in Sources */,
+				CB6EBC582A81C8A40076E515 /* ApiService.swift in Sources */,
 				CB531E5C2A6620870070C4B5 /* UrlGenerator.swift in Sources */,
 				CB35E8FE2A63039F00B8BD7D /* NavigationManager.swift in Sources */,
 				CB531E592A661B8F0070C4B5 /* NetworkModel.swift in Sources */,

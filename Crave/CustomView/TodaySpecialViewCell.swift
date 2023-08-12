@@ -14,6 +14,7 @@ class TodaySpecialViewCell: UITableViewCell, UICollectionViewDataSource, UIColle
     static let identifierName = "TodaySpecialViewCell"
 
     @IBOutlet weak var collectionView: UICollectionView!
+    private var dataList = [TodaySpecial]()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,20 +37,25 @@ class TodaySpecialViewCell: UITableViewCell, UICollectionViewDataSource, UIColle
         //collectionView.reloadData()
     }
     
-    func update() {
+    func update(list : [TodaySpecial]) {
         //collectionView.reloadData()
-        print("update :(")
+        print("update TodaySpecial CollectionView")
+        dataList.removeAll()
+        self.dataList.append(contentsOf: list)
+        self.collectionView.reloadData()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return self.dataList.count
     }
     
 
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         print("cellForItemAt \(indexPath.row)")
-        return getFoodItemCell(collectionView: collectionView, indexPath: indexPath)
+        let foodItemCell =  getFoodItemCell(collectionView: collectionView, indexPath: indexPath)
+        foodItemCell.bind(todaySpecial: dataList[indexPath.row])
+        return foodItemCell
     }
     
     private func getFoodItemCell(collectionView:UICollectionView, indexPath : IndexPath) -> FoodItemCell {
